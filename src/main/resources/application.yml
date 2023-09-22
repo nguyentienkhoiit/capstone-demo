@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security
+    username: root
+    password: aA@12345678
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+    database: mysql
+
+application:
+  security:
+    jwt:
+      secret-key: 3111803aa629ccec119ed812fd787074c7a2eebf5696e9b9b2f6e45136598fb4
+      expiration: 86400000 # a day
